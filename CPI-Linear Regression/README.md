@@ -973,7 +973,7 @@ sorted_vif_data.iloc[:2,]
 </div>
 
 
-## Build the model with two explanatory variables
+# multiple linear regression using 2 Explanatory Variables
 
 
 ```python
