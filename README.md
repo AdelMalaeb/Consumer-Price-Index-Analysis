@@ -30,7 +30,7 @@ Data Range: 1990-01-01 - 2022-09-01
 - Feature 18: CUSR0000SETA02 - Used Cars & Trucks in U.S. City Average
 
 ### Feature Explanation in details
-* 1- CUSR0000SETG01: Airline Fares in U.S. City Average:
+* <u>**1- CUSR0000SETG01:**</u> Airline Fares in U.S. City Average:
 This feature represents the average price of airline fares in U.S. cities. It measures the cost of air travel for consumers and can be influenced by factors such as fuel prices, demand for air travel, competition among airlines, and government regulations.
 
 * 2- CUSR0000SAF116: Alcoholic Beverages in U.S. City Average:
