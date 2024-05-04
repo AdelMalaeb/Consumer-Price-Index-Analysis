@@ -1,14 +1,14 @@
 # Consumer-Price-Index-Analysis
 This repo contains different techniques for analyzing CPI. This work was done in my previous work experience with a Hedge Fund - Issachar Technologies
 
-# Privacy 
+## Privacy 
 All specifications regarding the data is automated through BigQuery on google cloud for Issachar Technologies; However, for representation purposes I compiled similar data extracted from FRED ECONOMIC DATA | ST. LOUIS FED
 
-# Dataset
+## Dataset
 Data extracted from - https://fred.stlouisfed.org/searchresults/?st=cpi&isTst=1
 Data Range: 1990-01-01 - 2022-09-01
 
-## Feature Explanation 
+### Feature Explanation 
 - Target: CPIAUCSL - (CPIAUCSL) is a price index of a basket of goods and services paid by urban consumers.
 - Feature 1: CUSR0000SETG01 - Airline Fares in U.S. City Average
 - Feature 2: CUSR0000SAF116 - Alcoholic Beverages in U.S. City Average
@@ -29,4 +29,7 @@ Data Range: 1990-01-01 - 2022-09-01
 - Feature 17: CPITRNSL - Transportation in U.S. City Average
 - Feature 18: CUSR0000SETA02 - Used Cars & Trucks in U.S. City Average
     
+## Files Included:
+* 1- CPI - Linear Regression Models
+* 2- Pre-defined function for evaluating Linear Regression assumptions for CPI
 
