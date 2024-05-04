@@ -22,29 +22,6 @@ data = pd.read_csv("/Users/adel/Desktop/Issachar Technologies/Cpi-Project-Update
 
 ##  Data exploration
 
-### Feature Explanation - Data extracted from - https://fred.stlouisfed.org/searchresults/?st=cpi&isTst=1
-- Target: CPIAUCSL - (CPIAUCSL) is a price index of a basket of goods and services paid by urban consumers.
-- Feature 1: CUSR0000SETG01 - Airline Fares in U.S. City Average
-- Feature 2: CUSR0000SAF116 - Alcoholic Beverages in U.S. City Average
-- Feature 3: CPIAPPSL - Apparel in U.S. City Average
-- Feature 4: CUSR0000SAD - Durables in U.S. City Average 
-- Feature 5: CUSR0000SEHF01 - Electricity in U.S. City Average
-- Feature 6: CPIENGSL - Energy in U.S. City Average 
-- Feature 7: CPIUFDSL - Food in U.S. City Average 
-- Feature 8: CUSR0000SEHE - Fuel Oil & Other Fuels in U.S. City Average 
-- Feature 9: CUSR0000SETB01 - Gasoline in U.S. City Average 
-- Feature 10: CPIHOSSL - Housing in U.S. City Average 
-- Feature 11: CPIMEDSL - Medical Care in U.S. City Average 
-- Feature 12: CUSR0000SAM1 - Medical Care Commodities in U.S. City Average 
-- Feature 13: CUSR0000SETA01 - New Vihicles in U.S. City Average 
-- Feature 14: CUUR0000SA0R - Purchasing Power in U.S. City Average 
-- Feature 15: CUSR0000SEHA - Rent in U.S. City Average
-- Feature 16: CUSR0000SAH1 - Shelter in U.S. City Average
-- Feature 17: CPITRNSL - Transportation in U.S. City Average
-- Feature 18: CUSR0000SETA02 - Used Cars & Trucks in U.S. City Average
-    
-Data Range: 1990-01-01 - 2022-09-01
-
 
 ```python
 #create a data dictionary to change the names of the column
@@ -79,312 +56,8 @@ data = data.rename(columns = colmn_dict)
 data
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>DATE</th>
-      <th>CPI</th>
-      <th>Airline_Fares</th>
-      <th>Alcoholic_Beverages</th>
-      <th>Apparel</th>
-      <th>Durables</th>
-      <th>Electricity</th>
-      <th>Energy</th>
-      <th>Food</th>
-      <th>Fuel_Oil</th>
-      <th>Gasoline</th>
-      <th>Housing</th>
-      <th>Medical_Care</th>
-      <th>Medical_Care_Commodities</th>
-      <th>New_Vehicles</th>
-      <th>Purchasing_Power</th>
-      <th>Rent</th>
-      <th>Shelter</th>
-      <th>Transportation</th>
-      <th>Used_Cars_Trucks</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1990-01-01</td>
-      <td>127.500</td>
-      <td>134.800</td>
-      <td>126.700</td>
-      <td>119.900</td>
-      <td>113.300</td>
-      <td>116.000</td>
-      <td>98.900</td>
-      <td>129.700</td>
-      <td>110.600</td>
-      <td>92.900</td>
-      <td>126.100</td>
-      <td>156.000</td>
-      <td>157.300</td>
-      <td>121.300</td>
-      <td>78.5</td>
-      <td>135.800</td>
-      <td>136.300</td>
-      <td>117.000</td>
-      <td>119.200</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1990-02-01</td>
-      <td>128.000</td>
-      <td>138.200</td>
-      <td>127.000</td>
-      <td>122.000</td>
-      <td>113.400</td>
-      <td>117.200</td>
-      <td>98.200</td>
-      <td>130.800</td>
-      <td>92.800</td>
-      <td>93.000</td>
-      <td>126.200</td>
-      <td>157.100</td>
-      <td>158.700</td>
-      <td>121.200</td>
-      <td>78.2</td>
-      <td>136.100</td>
-      <td>136.600</td>
-      <td>117.200</td>
-      <td>118.700</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1990-03-01</td>
-      <td>128.600</td>
-      <td>141.000</td>
-      <td>127.600</td>
-      <td>123.800</td>
-      <td>113.300</td>
-      <td>117.100</td>
-      <td>97.600</td>
-      <td>131.000</td>
-      <td>89.800</td>
-      <td>92.300</td>
-      <td>126.800</td>
-      <td>158.300</td>
-      <td>159.700</td>
-      <td>120.900</td>
-      <td>77.7</td>
-      <td>136.700</td>
-      <td>137.600</td>
-      <td>117.300</td>
-      <td>118.500</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1990-04-01</td>
-      <td>128.900</td>
-      <td>144.100</td>
-      <td>127.900</td>
-      <td>124.100</td>
-      <td>113.200</td>
-      <td>117.800</td>
-      <td>97.500</td>
-      <td>130.800</td>
-      <td>88.400</td>
-      <td>92.800</td>
-      <td>127.100</td>
-      <td>159.600</td>
-      <td>160.900</td>
-      <td>120.800</td>
-      <td>77.6</td>
-      <td>137.200</td>
-      <td>138.200</td>
-      <td>117.700</td>
-      <td>118.200</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1990-05-01</td>
-      <td>129.100</td>
-      <td>145.900</td>
-      <td>128.600</td>
-      <td>124.000</td>
-      <td>113.200</td>
-      <td>117.500</td>
-      <td>96.700</td>
-      <td>131.100</td>
-      <td>87.500</td>
-      <td>91.700</td>
-      <td>127.300</td>
-      <td>160.800</td>
-      <td>161.800</td>
-      <td>120.900</td>
-      <td>77.4</td>
-      <td>137.600</td>
-      <td>138.600</td>
-      <td>117.500</td>
-      <td>117.600</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>388</th>
-      <td>2022-05-01</td>
-      <td>291.474</td>
-      <td>336.022</td>
-      <td>272.413</td>
-      <td>126.927</td>
-      <td>127.541</td>
-      <td>248.505</td>
-      <td>308.839</td>
-      <td>301.879</td>
-      <td>508.909</td>
-      <td>372.063</td>
-      <td>297.881</td>
-      <td>543.220</td>
-      <td>386.273</td>
-      <td>171.254</td>
-      <td>34.2</td>
-      <td>365.365</td>
-      <td>350.418</td>
-      <td>270.297</td>
-      <td>207.518</td>
-    </tr>
-    <tr>
-      <th>389</th>
-      <td>2022-06-01</td>
-      <td>295.328</td>
-      <td>329.906</td>
-      <td>273.553</td>
-      <td>127.929</td>
-      <td>128.476</td>
-      <td>252.804</td>
-      <td>332.087</td>
-      <td>304.867</td>
-      <td>505.445</td>
-      <td>413.606</td>
-      <td>300.290</td>
-      <td>546.861</td>
-      <td>387.787</td>
-      <td>172.369</td>
-      <td>33.7</td>
-      <td>368.203</td>
-      <td>352.550</td>
-      <td>280.691</td>
-      <td>210.863</td>
-    </tr>
-    <tr>
-      <th>390</th>
-      <td>2022-07-01</td>
-      <td>295.271</td>
-      <td>304.071</td>
-      <td>274.889</td>
-      <td>127.818</td>
-      <td>128.864</td>
-      <td>256.780</td>
-      <td>316.955</td>
-      <td>308.220</td>
-      <td>464.597</td>
-      <td>381.710</td>
-      <td>301.639</td>
-      <td>549.282</td>
-      <td>390.077</td>
-      <td>173.432</td>
-      <td>33.8</td>
-      <td>370.789</td>
-      <td>354.449</td>
-      <td>274.821</td>
-      <td>209.998</td>
-    </tr>
-    <tr>
-      <th>391</th>
-      <td>2022-08-01</td>
-      <td>295.620</td>
-      <td>290.010</td>
-      <td>275.861</td>
-      <td>128.091</td>
-      <td>129.490</td>
-      <td>260.643</td>
-      <td>301.045</td>
-      <td>310.664</td>
-      <td>453.418</td>
-      <td>341.383</td>
-      <td>304.109</td>
-      <td>553.006</td>
-      <td>391.032</td>
-      <td>174.891</td>
-      <td>33.8</td>
-      <td>373.525</td>
-      <td>356.894</td>
-      <td>268.586</td>
-      <td>209.782</td>
-    </tr>
-    <tr>
-      <th>392</th>
-      <td>2022-09-01</td>
-      <td>296.761</td>
-      <td>292.434</td>
-      <td>275.760</td>
-      <td>127.722</td>
-      <td>129.338</td>
-      <td>261.777</td>
-      <td>294.705</td>
-      <td>313.101</td>
-      <td>440.818</td>
-      <td>324.646</td>
-      <td>306.323</td>
-      <td>557.426</td>
-      <td>390.677</td>
-      <td>176.058</td>
-      <td>33.7</td>
-      <td>376.679</td>
-      <td>359.567</td>
-      <td>267.043</td>
-      <td>207.532</td>
-    </tr>
-  </tbody>
-</table>
-<p>393 rows × 20 columns</p>
-</div>
-
-
-
+ 
 ### Explore the data size
-
 
 ```python
 data.shape
@@ -409,23 +82,6 @@ description = data[columns_to_describe].describe()
 description
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -689,31 +345,12 @@ plt.savefig('Distribution of CPI.pdf')
 plt.show()
 ```
 
-
-    
-![png](output_18_0.png)
-    
-
-
 ##  Building the Model
 
 
 ```python
 sns.pairplot(data)
 ```
-
-
-
-
-    <seaborn.axisgrid.PairGrid at 0x7fe9dc703820>
-
-
-
-
-    
-![png](output_20_1.png)
-    
-
 
 Feature 2: CUSR0000SAF116 - Alcoholic Beverages in U.S. City Average and CPI have a linear relationship
 
@@ -831,11 +468,6 @@ plt.show()
 ```
 
 
-    
-![png](output_29_0.png)
-    
-
-
 **Result:** Linearity Assumption is met
 
 ## 2. Normality
@@ -855,25 +487,6 @@ Create two plots to check this assumption:
 residuals = model.resid
 residuals
 ```
-
-
-
-
-    0       6.311780
-    1       6.494368
-    2       6.459544
-    3       6.442132
-    4       5.901504
-             ...    
-    388    16.115600
-    389    18.763435
-    390    17.292893
-    391    16.613478
-    392    17.861340
-    Length: 393, dtype: float64
-
-
-
 
 ```python
 # Create a figure and subplots grid using Matplotlib
@@ -895,11 +508,6 @@ plt.show()
 ```
 
 
-    
-![png](output_33_0.png)
-    
-
-
 The histogram of residuals exhibits a normal distribution. QQ plot emphasizes on that as well.
 
 ## 3. Homoscedasticity
@@ -913,24 +521,6 @@ Check that this assumption is not violated by creating a scatterplot with the fi
 fitted_values = model.fittedvalues
 fitted_values
 ```
-
-
-
-
-    0      121.188220
-    1      121.505632
-    2      122.140456
-    3      122.457868
-    4      123.198496
-              ...    
-    388    275.358400
-    389    276.564565
-    390    277.978107
-    391    279.006522
-    392    278.899660
-    Length: 393, dtype: float64
-
-
 
 
 ```python
@@ -949,15 +539,11 @@ plt.savefig("Homoscedasticity assupmtion.pdf")
 plt.show()
 ```
 
-
-    
-![png](output_38_0.png)
-    
-
-
 **I noticed that this assumption does not fully hold!**
 
-## Additional examination: Logarithmic Transformation of dependant variable
+## Since the assumptions were not fully met, I decided to investigate further
+
+### Additional examination: Logarithmic Transformation of dependant variable
 
 
 ```python
@@ -981,24 +567,6 @@ import numpy as np
 transformed_data_CPI = np.log(data["CPI"])
 transformed_data_CPI
 ```
-
-
-
-
-    0      4.848116
-    1      4.852030
-    2      4.856707
-    3      4.859037
-    4      4.860587
-             ...   
-    388    5.674951
-    389    5.688087
-    390    5.687894
-    391    5.689075
-    392    5.692927
-    Name: CPI, Length: 393, dtype: float64
-
-
 
 
 ```python
@@ -1071,121 +639,6 @@ model.summary()
 </table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.06e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
 
 
-
-
-```python
-sns.scatterplot(x='Alcoholic_Beverages', y=transformed_data_CPI, data = data)
-
-plt.title("Scatter plot")
-plt.xlabel("Alcoholic_Beverages")
-plt.ylabel("transformed_data_CPI")
-
-plt.show()
-```
-
-
-    
-![png](output_45_0.png)
-    
-
-
-
-```python
-#get the residuals
-
-residuals = model.resid
-residuals
-```
-
-
-
-
-    0     -0.024316
-    1     -0.022024
-    2     -0.020593
-    3     -0.019885
-    4     -0.022120
-             ...   
-    388    0.014513
-    389    0.021484
-    390    0.014066
-    391    0.009991
-    392    0.014389
-    Length: 393, dtype: float64
-
-
-
-
-```python
-# Create a figure and subplots grid using Matplotlib
-fig, axs = plt.subplots(1, 2, figsize=(20, 8))  # 1 rows, 2 column
-
-# Plot 1: Histogram plot using Seaborn in the first subplot (axs[0])
-sns.histplot(x=residuals, data=data, ax=axs[0])
-axs[0].set_title('Histogram of residuals')
-
-# Plot 2: QQ plot using Seaborn in the second subplot (axs[1])
-sm.qqplot(residuals, ax=axs[1],line = 's')
-axs[1].set_title('QQ plot of residuals')
-
-# Adjust layout and display the figure
-plt.tight_layout()
-plt.show()
-```
-
-
-    
-![png](output_47_0.png)
-    
-
-
-
-```python
-fitted_values = model.fittedvalues
-fitted_values
-```
-
-
-
-
-    0      4.872432
-    1      4.874055
-    2      4.877300
-    3      4.878922
-    4      4.882707
-             ...   
-    388    5.660437
-    389    5.666602
-    390    5.673827
-    391    5.679084
-    392    5.678538
-    Length: 393, dtype: float64
-
-
-
-
-```python
-sns.scatterplot(x=fitted_values, y=residuals)
-
-# Set the x-axis label.
-plt.xlabel("fitted_values")
-# Set the y-axis label.
-plt.ylabel("residuals")
-# Set the title.
-plt.title("Homoscedasticity Assupmtion")
-# Add a line at y = 0 to visualize the variance of residuals above and below 0.
-plt.axhline(y=0, color='red', linestyle='--')
- 
-
-plt.show()
-```
-
-
-    
-![png](output_49_0.png)
-    
-
-
 Even after logarithmic transformation, the assumption is still not met.
 
 **Options to consider:**
@@ -1198,30 +651,10 @@ Even after logarithmic transformation, the assumption is still not met.
 
 4-  Non-Parametric Methods
 
+
 # Multiple linear regression using at least two or more Explanatory Variables
 
 
-```python
-data.head(5)
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1392,23 +825,6 @@ vif_data["VIF"] = round(vif_data["VIF"],2)
 vif_data
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1532,22 +948,6 @@ sorted_vif_data = vif_data.sort_values(by='VIF',ascending=True)
 sorted_vif_data.iloc[:2,]
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -1573,26 +973,7 @@ sorted_vif_data.iloc[:2,]
 </div>
 
 
-
-
-```python
-sns.pairplot(data)
-```
-
-
-
-
-    <seaborn.axisgrid.PairGrid at 0x7fe9be953d00>
-
-
-
-
-    
-![png](output_56_1.png)
-    
-
-
-## Build the model
+## Build the model with two explanatory variables
 
 
 ```python
@@ -1672,137 +1053,6 @@ model_results
 </tr>
 </table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 2.11e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
 
-
-
-### Check for the assumptions
-
-#### Linearity
-
-
-```python
-fig, axes = plt.subplots(1,2, figsize=(20,5))
-
-#Create scatter plot for the first feature CUSR0000SETG01
-
-sns.scatterplot(x=data["Airline_Fares"],y=data['CPI'], ax=axes[0])
-axes[0].set_title("Airline_Fares & CPI")
-
-
-#Create scatter plot for the first feature CUSR0000SEHE
-
-sns.scatterplot(x=data["Fuel_Oil"],y=data['CPI'], ax=axes[1])
-axes[1].set_title("Fuel_Oil & CPI")
-
-plt.tight_layout()
-plt.show
-
-```
-
-
-
-
-    <function matplotlib.pyplot.show(close=None, block=None)>
-
-
-
-
-    
-![png](output_62_1.png)
-    
-
-
-CUSR0000SETG01 and CPI seems to have a clear linear relationship. CUSR0000SEHE and CPI also seems to exhibit a linear relationship.
-
-**Assumption is met**
-
-#### Normality of residuals
-
-
-```python
-residuals = model.resid
-residuals
-```
-
-
-
-
-    0     -32.284299
-    1     -25.839864
-    2     -24.406624
-    3     -23.853574
-    4     -23.476296
-             ...    
-    388   -22.326473
-    389   -16.802425
-    390    -0.670842
-    391     4.637888
-    392     9.985439
-    Length: 393, dtype: float64
-
-
-
-
-```python
-fig, axes = plt.subplots(1,2, figsize=(20,5))
-
-#Create histogram plot for the residuals
-
-sns.histplot(residuals, ax=axes[0])
-axes[0].set_title("Histogram of residuals")
-
-
-#Create a qqplot for the residuals
-
-sm.qqplot(residuals,line = 's', ax=axes[1])
-axes[1].set_title("QQ plot")
-
-plt.tight_layout()
-plt.show
-
-```
-
-
-
-
-    <function matplotlib.pyplot.show(close=None, block=None)>
-
-
-
-
-    
-![png](output_66_1.png)
-    
-
-
-The residuals follow a normal distribution.
-
-**Assumption is met**
-
-
-#### Homoscedasticity
-
-
-```python
-fitted_values = model.fittedvalues
-
-fig = sns.scatterplot(fitted_values, residuals)
-
-fig.set_title("Homoscedasticity")
-fig.set_xlabel("Fitted Values")
-fig.set_ylabel("Residuals")
-fig.axhline(0, color = 'r')
-
-plt.show()
-```
-
-    /Users/adel/opt/anaconda3/lib/python3.9/site-packages/seaborn/_decorators.py:36: FutureWarning: Pass the following variables as keyword args: x, y. From version 0.12, the only valid positional argument will be `data`, and passing other arguments without an explicit keyword will result in an error or misinterpretation.
-      warnings.warn(
-
-
-
-    
-![png](output_69_1.png)
-    
 
 
 ## Results and evaluation
