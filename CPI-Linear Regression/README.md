@@ -1166,3 +1166,12 @@ Applying this model to this data will **NOT** resemble a good prediction modelin
 ```python
 
 ```
+# Important Notes
+This was applied on a Main Dataset:
+
+When applying linear regression on a main dataset, the entire dataset is typically used to train the model.
+The model is fitted to the entire dataset, learning the relationships between the independent variables and the target variable.
+This approach is simple and straightforward but may lead to overfitting, where the model learns to memorize the training data rather than generalize well to unseen data.
+There is no separate evaluation of the model's performance on unseen data, which can make it difficult to assess the model's generalization ability. 
+
+A machine learning model where the data is split to train a linear regression model on train data and evaluate the results on test data is done in another projects.
