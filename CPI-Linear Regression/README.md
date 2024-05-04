@@ -1055,7 +1055,7 @@ model_results
 
 
 
-## Results and evaluation
+# Results and evaluation
 
 
 
@@ -1143,7 +1143,7 @@ An increase in 1 unit of fuel oil leads to an increase of 0.3484 in CPI
 * $\text{P-value}_{Airlines fares} = 0.042$,	Statistically significant given a 5% significance level
 * $\text{P-value}_{fuel oil} = 0.000$,	Statistically significant given a 5% significance level
 
-## Considerations
+# Considerations
 
 
 Eventhough It might seem that the following multiple regression model behaves well given the statistical significance of the coefficients and the evaluation metric **Adjusted R2** which states that 79.1% of the variation in CPI is explained by Airline fares and fuel oil. 
